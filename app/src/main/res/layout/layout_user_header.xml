@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <import type="android.text.TextUtils" />
+
+        <variable
+            name="userUIModel"
+            type="com.kayan.github.model.ui.UserUIModel" />
+
+        <variable
+            name="baseUserViewModel"
+            type="com.kayan.github.module.base.BaseUserInfoViewModel" />
+
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/user_header_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bottom_radius"
+            android:elevation="10dp"
+            android:padding="10dp"
+            android:visibility="@{TextUtils.isEmpty(userUIModel.login) ? View.GONE : View.VISIBLE}">
+
+            <ImageView
+                android:id="@+id/user_header_image"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:userHeaderSize="@{100}"
+                app:userHeaderUrl="@{userUIModel.avatarUrl}" />
+
+            <TextView
+                android:id="@+id/user_header_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="@{userUIModel.login}"
+                android:textColor="@color/white"
+                android:textSize="@dimen/bigTextSize"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/user_header_image"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/user_header_other_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:text="@{userUIModel.name}"
+                android:textColor="@color/subLightTextColor"
+                android:textSize="@dimen/smallTextSize"
+                app:layout_constraintStart_toEndOf="@+id/user_header_image"
+                app:layout_constraintTop_toBottomOf="@+id/user_header_name" />
+
+            <com.mikepenz.iconics.view.IconicsTextView
+                android:id="@+id/user_header_company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:text="@{`{GSY_USER_ITEM_COMPANY} `+userUIModel.company}"
+                android:textColor="@color/subLightTextColor"
+                android:textSize="@dimen/smallTextSize"
+                app:layout_constraintStart_toEndOf="@+id/user_header_image"
+                app:layout_constraintTop_toBottomOf="@+id/user_header_other_name" />
+
+            <com.mikepenz.iconics.view.IconicsTextView
+                android:id="@+id/user_header_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="3dp"
+                android:text="@{`{GSY_USER_ITEM_LOCATION} `+userUIModel.location}"
+                android:textColor="@color/subLightTextColor"
+                android:textSize="@dimen/smallTextSize"
+                app:layout_constraintStart_toEndOf="@+id/user_header_image"
+                app:layout_constraintTop_toBottomOf="@+id/user_header_company" />
+
+            <TextView
+                android:id="@+id/user_header_notify"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="{GSY-USER_NOTIFY}"
+                android:textColor="@color/subLightTextColor"
+                android:textSize="@dimen/smallTextSize"
+                app:layout_constraintStart_toEndOf="@+id/user_header_name"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.mikepenz.iconics.view.IconicsTextView
+                android:id="@+id/user_header_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:autoLink="all"
+                android:text="@{`{GSY_USER_ITEM_LINK} `+userUIModel.blog}"
+                android:textColor="@color/subLightTextColor"
+                android:textSize="@dimen/smallTextSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_header_location" />
+
+            <TextView
+                android:id="@+id/user_header_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="@{userUIModel.bioDes}"
+                android:textColor="@color/subLightTextColor"
+                android:textSize="@dimen/smallTextSize"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_header_link" />
+
+            <View
+                android:id="@+id/user_header_action_horizontal_line"
+                style="@style/horizontalLine"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toBottomOf="@+id/user_header_des" />
+
+
+            <LinearLayout
+                android:id="@+id/user_sub_info"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user_header_action_horizontal_line"
+                app:layout_constraintWidth_percent="1">
+
+                <TextView
+                    android:id="@+id/user_header_repos"
+                    style="@style/verticalItemText"
+                    android:background="@drawable/ripple_bg"
+                    android:onClick="@{baseUserViewModel::onTabIconClick}"
+                    android:text="@{userUIModel.publicRepos}" />
+
+                <View style="@style/verticalLine" />
+
+                <TextView
+                    android:id="@+id/user_header_fan"
+                    style="@style/verticalItemText"
+                    android:background="@drawable/ripple_bg"
+                    android:onClick="@{baseUserViewModel::onTabIconClick}"
+                    android:text="@{userUIModel.followers}" />
+
+                <View style="@style/verticalLine" />
+
+                <TextView
+                    android:id="@+id/user_header_focus"
+                    style="@style/verticalItemText"
+                    android:background="@drawable/ripple_bg"
+                    android:onClick="@{baseUserViewModel::onTabIconClick}"
+                    android:text="@{userUIModel.following}" />
+
+                <View style="@style/verticalLine" />
+
+                <TextView
+                    android:id="@+id/user_header_star"
+                    style="@style/verticalItemText"
+                    android:background="@drawable/ripple_bg"
+                    android:onClick="@{baseUserViewModel::onTabIconClick}"
+                    android:text="@{userUIModel.starRepos}" />
+
+                <View style="@style/verticalLine" />
+
+                <TextView
+                    android:id="@+id/user_header_honor"
+                    style="@style/verticalItemText"
+                    android:background="@drawable/ripple_bg"
+                    android:onClick="@{baseUserViewModel::onTabIconClick}"
+                    android:text="@{userUIModel.honorRepos}" />
+            </LinearLayout>
+
+
+            <com.kayan.github.ui.view.StateButton
+                android:id="@+id/login_off_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_header_card"
+                android:layout_gravity="center_horizontal"
+                android:text="@string/LoginOut"
+                android:textSize="@dimen/normalTextSize"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/user_sub_info"
+                android:visibility="@{TextUtils.isEmpty(userUIModel.login) ? View.GONE : View.VISIBLE}"
+                android:onClick="@{baseUserViewModel::loginOut}"
+                app:animationDuration="1000"
+                app:normalBackgroundColor="@color/colorPrimaryDark"
+                app:normalTextColor="@android:color/white"
+                app:pressedBackgroundColor="@color/colorPrimaryDark"
+                app:pressedTextColor="@android:color/white"
+                app:radius="5dp"
+                app:roundsize="false"
+                app:unableBackgroundColor="@color/colorPrimaryDark"
+                app:unableTextColor="@android:color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.kayan.github.ui.view.StateButton
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/user_header_card"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/Login"
+            android:textSize="@dimen/normalTextSize"
+            android:visibility="@{TextUtils.isEmpty(userUIModel.login) ? View.VISIBLE : View.GONE}"
+            app:animationDuration="1000"
+            app:normalBackgroundColor="@color/colorPrimaryDark"
+            app:normalTextColor="@android:color/white"
+            app:pressedBackgroundColor="@color/colorPrimaryDark"
+            app:pressedTextColor="@android:color/white"
+            app:radius="5dp"
+            app:roundsize="false"
+            app:unableBackgroundColor="@color/colorPrimaryDark"
+            app:unableTextColor="@android:color/white" />
+
+        <androidx.cardview.widget.CardView
+            style="@style/whiteCard"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:visibility="gone"
+            android:layout_below="@+id/user_header_card">
+<!--            android:visibility="@{`Organization`.equals(userUIModel.type) ? View.GONE : View.VISIBLE}">-->
+
+            <com.kayan.github.ui.view.GSYWebViewContainer
+                android:id="@+id/user_header_state"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:webViewUrl="@{userUIModel.actionUrl}" />
+
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+</layout>
