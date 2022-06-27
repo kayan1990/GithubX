@@ -20,6 +20,7 @@ class FlatMapRealmSaveResult<T, E : RealmModel>(response: Response<T>, private v
         if (response.isSuccessful && needSave) {
             val realm = Realm.getDefaultInstance()
             realm.executeTransaction { bgRealm ->
+                //查询是否有对应的class 数据库表
                 val results = listener.query(bgRealm.where(clazz))
                 val commitTarget = if (results.isNotEmpty()) {
                     results[0]

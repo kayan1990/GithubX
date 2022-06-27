@@ -22,7 +22,7 @@ class MyFragment : BaseUserInfoFragment<MyViewModel>() {
     override fun bindHeader(binding: LayoutUserHeaderBinding) {
         binding.userHeaderNotify.visibility = View.VISIBLE
         binding.userHeaderNotify.setOnClickListener {
-            startActivityForResult(Intent(context, NotifyActivity::class.java), 1000)
+//            startActivityForResult(Intent(context, NotifyActivity::class.java), 1000)
         }
 
         binding.loginBtn.setOnClickListener {

@@ -7,6 +7,7 @@ import com.kayan.github.ui.view.LoadingDialog
 
 /**
  * 带loading显示的结果回调
+ * 在网络请求的开始和结束，自动处理loading展示和消失逻辑
  * Created by kayan
  * Date: 2018-10-08
  */

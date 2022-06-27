@@ -112,12 +112,7 @@ abstract class GeneralListFragmentBindModule {
 }
 
 
-@Module
-abstract class NotifyFragmentBindModule {
 
-    @ContributesAndroidInjector(modules = [NotifyModule::class])
-    abstract fun contributeNotifyFragment(): NotifyFragment
-}
 
 
 

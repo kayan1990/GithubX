@@ -4,6 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import android.view.View
 import androidx.databinding.ViewDataBinding
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
@@ -63,7 +64,7 @@ abstract class BaseListFragment<T : ViewDataBinding, R : BaseViewModel> : BaseFr
             }
         })
 
-        //进行数据刷新
+        //进行列表数据刷新，这里可以改造下，最好用DiffUtil
         getViewModel().dataList.observe(this, Observer { items ->
             items?.apply {
                 if (items.size > 0) {

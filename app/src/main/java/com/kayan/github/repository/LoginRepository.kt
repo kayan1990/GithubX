@@ -17,7 +17,7 @@ import com.kayan.github.common.utils.GSYPreference
 import com.kayan.github.kotlin.BuildConfig
 import com.kayan.github.model.bean.LoginRequestModel
 import com.kayan.github.model.bean.User
-import com.kayan.github.module.StartNavigationActivity
+import com.kayan.github.module.main.MainActivity
 import com.kayan.github.service.LoginService
 import io.reactivex.Observable
 import io.reactivex.functions.BiFunction
@@ -183,7 +183,7 @@ class LoginRepository @Inject constructor(private val retrofit: Retrofit, privat
         userBasicCodeStorage = ""
         userInfoStorage = ""
         clearCookies()
-        val intent = Intent(context, StartNavigationActivity::class.java)
+        val intent = Intent(context, MainActivity::class.java)
         intent.clearTask()
         intent.clearTop()
         context.startActivity(intent)

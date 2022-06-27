@@ -74,7 +74,7 @@ class TrendFragment : BaseListFragment<FragmentTrendBinding, TrendViewModel>() {
 
         val dropMap = HashMap<String, View>()
 
-        for (i in 0 until sortData.size) {
+        for (i in sortData.indices) {
             val dropList = ListView(context)
             dropList.dividerHeight = 0
             val sinceListAdapter = ListDropDownAdapter(context!!, sortData[i])

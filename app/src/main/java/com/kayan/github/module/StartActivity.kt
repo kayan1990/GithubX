@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.kayan.github.kotlin.R
+import com.kayan.github.module.main.MainActivity
 import org.jetbrains.anko.clearTask
 
 /**
@@ -17,7 +18,7 @@ class StartActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_start)
 
-        val intent = Intent(this, StartNavigationActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         intent.clearTask()
         startActivity(intent)
 

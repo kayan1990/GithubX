@@ -15,6 +15,8 @@ import com.kayan.github.ui.holder.base.DataBindingComponent
 
 /**
  * 基类Fragment
+ * 1。 统一处理 Fragment的 databinding
+ * 2。 处理nav跳转逻辑
  * Created by kayan
  * Date: 2022-06-18
  */

@@ -48,6 +48,7 @@ class BindingDataRecyclerManager : BindSuperAdapterManager() {
         try {
             `object`.isAccessible = true
             return if (constructorFirst) {
+                //反射调用，将databinding 的view传递进去
                 `object`.newInstance(context, itemTextBinding.root, itemTextBinding) as T
             } else {
                 `object`.newInstance(itemTextBinding.root) as T

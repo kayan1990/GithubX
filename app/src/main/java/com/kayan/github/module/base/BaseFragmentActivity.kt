@@ -15,7 +15,7 @@ import dagger.android.support.HasSupportFragmentInjector
 import kotlinx.android.synthetic.main.activity_fragment_container.*
 import javax.inject.Inject
 
-/**
+/** 提供Fragment的 baseActivity
  * Created by kayan
  * Date: 2018-10-24
  */

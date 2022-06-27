@@ -1,13 +1,11 @@
 package com.kayan.github.di
 
 import com.kayan.github.di.annotation.ActivityScope
-import com.kayan.github.module.StartNavigationActivity
+import com.kayan.github.module.main.MainActivity
 import com.kayan.github.module.code.CodeDetailActivity
 import com.kayan.github.module.info.UserInfoActivity
 import com.kayan.github.module.issue.IssueDetailActivity
 import com.kayan.github.module.list.GeneralListActivity
-import com.kayan.github.module.main.MainActivity
-import com.kayan.github.module.notify.NotifyActivity
 import com.kayan.github.module.person.PersonActivity
 import com.kayan.github.module.repos.ReposDetailActivity
 import com.kayan.github.module.search.SearchActivity
@@ -26,10 +24,6 @@ abstract class ActivityBindModule {
     //主要作用就是通过 @ContributesAndroidInjector  标记哪个类需要使用依赖注入功能
     //节省代码
     @ContributesAndroidInjector(modules = [MainFragmentBindModule::class])
-    abstract fun StartNavigationActivityInjector(): StartNavigationActivity
-
-    @ActivityScope
-    @ContributesAndroidInjector(modules = [MainActivityModule::class, MainFragmentBindModule::class])
     abstract fun mainActivityInjector(): MainActivity
 
 
@@ -59,10 +53,6 @@ abstract class ActivityBindModule {
     @ActivityScope
     @ContributesAndroidInjector(modules = [GeneralListFragmentBindModule::class])
     abstract fun generalListActivityInjector(): GeneralListActivity
-
-    @ActivityScope
-    @ContributesAndroidInjector(modules = [NotifyFragmentBindModule::class])
-    abstract fun notifyActivityInjector(): NotifyActivity
 
 
     @ActivityScope
