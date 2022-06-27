@@ -19,7 +19,7 @@ import com.kayan.github.common.imageloader.ImageLoaderManager
 import com.kayan.github.common.imageloader.LoadOption
 import com.kayan.github.common.utils.FileUtils
 import com.kayan.github.di.ARouterInjectable
-import com.kayan.github.module.ARouterAddress
+import com.kayan.github.ARouterAddress
 import com.kayan.github.ui.adapter.TextListAdapter
 import kotlinx.android.synthetic.main.activity_image_preview.*
 import permissions.dispatcher.NeedsPermission

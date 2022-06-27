@@ -14,7 +14,7 @@ import com.kayan.github.kotlin.R
 import com.kayan.github.kotlin.databinding.ActivityUserInfoBinding
 import com.kayan.github.di.Injectable
 import com.kayan.github.model.AppGlobalModel
-import com.kayan.github.module.ARouterAddress
+import com.kayan.github.ARouterAddress
 import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector

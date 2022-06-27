@@ -12,7 +12,7 @@ import com.kayan.github.common.utils.copy
 import com.kayan.github.di.ARouterInjectable
 import com.kayan.github.kotlin.R
 import com.kayan.github.kotlin.databinding.FragmentCodeDetailBinding
-import com.kayan.github.module.ARouterAddress
+import com.kayan.github.ARouterAddress
 import com.kayan.github.module.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_code_detail.*
 import org.jetbrains.anko.browse

@@ -67,7 +67,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name="com.kayan.github.module.StartActivity"
+            android:name="com.kayan.github.StartActivity"
             android:screenOrientation="portrait"
             android:exported="true"
             android:theme="@style/StartTheme">

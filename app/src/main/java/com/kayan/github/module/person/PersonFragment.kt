@@ -7,7 +7,7 @@ import com.kayan.github.kotlin.R
 import com.kayan.github.common.utils.CommonUtils
 import com.kayan.github.common.utils.copy
 import com.kayan.github.di.ARouterInjectable
-import com.kayan.github.module.ARouterAddress
+import com.kayan.github.ARouterAddress
 import com.kayan.github.module.base.BaseUserInfoFragment
 import org.jetbrains.anko.browse
 import org.jetbrains.anko.share

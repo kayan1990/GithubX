@@ -10,7 +10,7 @@ import com.kayan.github.kotlin.databinding.FragmentSearchBinding
 import com.kayan.github.di.annotation.FragmentQualifier
 import com.kayan.github.model.ui.ReposUIModel
 import com.kayan.github.model.ui.UserUIModel
-import com.kayan.github.module.ARouterAddress
+import com.kayan.github.ARouterAddress
 import com.kayan.github.module.base.BaseListFragment
 import com.kayan.github.module.person.PersonActivity
 import com.kayan.github.module.repos.ReposDetailActivity

@@ -11,7 +11,7 @@ import com.kayan.github.di.ARouterInjectable
 import com.kayan.github.model.ui.EventUIModel
 import com.kayan.github.model.ui.ReposUIModel
 import com.kayan.github.model.ui.UserUIModel
-import com.kayan.github.module.ARouterAddress
+import com.kayan.github.ARouterAddress
 import com.kayan.github.module.base.BaseListFragment
 import com.kayan.github.module.person.PersonActivity
 import com.kayan.github.module.repos.ReposDetailActivity

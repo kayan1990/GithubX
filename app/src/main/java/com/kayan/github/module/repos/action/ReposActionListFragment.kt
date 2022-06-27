@@ -13,7 +13,7 @@ import com.kayan.github.kotlin.databinding.FragmentListBinding
 import com.kayan.github.kotlin.databinding.LayoutReposHeaderBinding
 import com.kayan.github.model.ui.CommitUIModel
 import com.kayan.github.model.ui.EventUIModel
-import com.kayan.github.module.ARouterAddress
+import com.kayan.github.ARouterAddress
 import com.kayan.github.module.base.BaseListFragment
 import com.kayan.github.ui.holder.CommitHolder
 import com.kayan.github.ui.holder.EventHolder

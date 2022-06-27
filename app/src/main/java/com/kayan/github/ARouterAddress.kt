@@ -1,4 +1,4 @@
-package com.kayan.github.module
+package com.kayan.github
 
 /**
  * ARouter 地址

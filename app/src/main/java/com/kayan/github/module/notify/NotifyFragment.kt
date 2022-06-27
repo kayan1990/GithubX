@@ -10,7 +10,7 @@ import com.kayan.github.common.utils.EventUtils
 import com.kayan.github.kotlin.databinding.FragmentNotifyBinding
 import com.kayan.github.di.ARouterInjectable
 import com.kayan.github.model.ui.EventUIModel
-import com.kayan.github.module.ARouterAddress
+import com.kayan.github.ARouterAddress
 import com.kayan.github.module.base.BaseListFragment
 import com.kayan.github.ui.holder.EventHolder
 import com.shuyu.commonrecycler.BindSuperAdapterManager

@@ -14,7 +14,7 @@ import com.kayan.github.common.utils.toSplitString
 import com.kayan.github.kotlin.databinding.FragmentReposFileListBinding
 import com.kayan.github.di.ARouterInjectable
 import com.kayan.github.model.ui.FileUIModel
-import com.kayan.github.module.ARouterAddress
+import com.kayan.github.ARouterAddress
 import com.kayan.github.module.base.BaseListFragment
 import com.kayan.github.module.code.CodeDetailActivity
 import com.kayan.github.ui.holder.FileHolder

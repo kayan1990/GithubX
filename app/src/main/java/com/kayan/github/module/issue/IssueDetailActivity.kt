@@ -9,7 +9,7 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.alibaba.android.arouter.launcher.ARouter
 import com.kayan.github.kotlin.R
 import com.kayan.github.di.ARouterInjectable
-import com.kayan.github.module.ARouterAddress
+import com.kayan.github.ARouterAddress
 import com.kayan.github.module.base.BaseFragmentActivity
 import com.kayan.github.module.repos.ReposDetailActivity
 

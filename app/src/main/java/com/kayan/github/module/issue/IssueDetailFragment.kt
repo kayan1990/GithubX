@@ -15,7 +15,7 @@ import com.kayan.github.kotlin.databinding.FragmentIssueDetailBinding
 import com.kayan.github.kotlin.databinding.LayoutIssueHeaderBinding
 import com.kayan.github.di.ARouterInjectable
 import com.kayan.github.model.ui.IssueUIModel
-import com.kayan.github.module.ARouterAddress
+import com.kayan.github.ARouterAddress
 import com.kayan.github.module.base.BaseListFragment
 import com.kayan.github.module.person.PersonActivity
 import com.kayan.github.ui.holder.IssueCommentHolder

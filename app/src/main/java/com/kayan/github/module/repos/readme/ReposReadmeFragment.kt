@@ -10,7 +10,7 @@ import com.alibaba.android.arouter.facade.annotation.Route
 import com.kayan.github.kotlin.R
 import com.kayan.github.kotlin.databinding.FragmentReposReadmeBinding
 import com.kayan.github.di.ARouterInjectable
-import com.kayan.github.module.ARouterAddress
+import com.kayan.github.ARouterAddress
 import com.kayan.github.module.base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_repos_readme.*
 import javax.inject.Inject

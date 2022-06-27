@@ -17,7 +17,7 @@ import com.kayan.github.kotlin.R
 import com.kayan.github.common.utils.CommonUtils
 import com.kayan.github.common.utils.copy
 import com.kayan.github.di.ARouterInjectable
-import com.kayan.github.module.ARouterAddress
+import com.kayan.github.ARouterAddress
 import com.kayan.github.module.base.BaseActivity
 import com.kayan.github.module.repos.action.ReposActionListFragment
 import com.kayan.github.module.repos.file.ReposFileListFragment
